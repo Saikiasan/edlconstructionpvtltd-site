@@ -1,14 +1,13 @@
 ---
 import GovLayout from '../../layouts/GovLayout.astro';
 import EmpanelmentGrid from '../../components/gov/EmpanelmentGrid.astro';
-import TenderBoard from '../../components/gov/TenderBoard.astro';
 import GovProjectCard from '../../components/gov/GovProjectCard.astro';
 ---
 
 <GovLayout title="Government & Public Sector Infrastructure EPC Division" activeGovPage="overview">
   
   <!-- Hero Section with Light Institutional Blueprint Grid -->
-  <section class="relative bg-white py-16 sm:py-24 overflow-hidden gov-pattern-grid-light border-b border-slate-200">
+  <section class="relative bg-white py-16 sm:py-20 overflow-hidden gov-pattern-grid-light border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
@@ -16,92 +15,90 @@ import GovProjectCard from '../../components/gov/GovProjectCard.astro';
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center space-x-2 bg-amber-50 border border-amber-200 rounded-full px-3.5 py-1.5 text-xs font-mono text-amber-900 font-semibold shadow-2xs">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>PUBLIC SECTOR INFRASTRUCTURE & EPC PORTAL</span>
+            <span>PUBLIC SECTOR INFRASTRUCTURE & EPC DIVISION</span>
           </div>
 
           <h1 class="text-3xl sm:text-5xl lg:text-6xl font-syne font-extrabold text-slate-900 leading-tight tracking-tight">
-            Nation Building Through <span class="text-blue-900">Resilient Infrastructure</span>
+            Infrastructure Engineering for <span class="text-blue-900">Public Works</span>
           </h1>
 
           <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
-            EDL Construction Pvt Ltd partners with Central Ministries, State PWDs, NHAI, Metro Rail Corporations, and Urban Development Authorities to deliver mega-scale highways, deep-foundation river bridges, mass transit corridors, and green administrative complexes under uncompromising statutory compliance.
+            EDL Construction Pvt Ltd provides specialized civil engineering, heavy structural construction, and turnkey project delivery for public authorities, regional departments, and infrastructure stakeholders with uncompromised quality assurance.
           </p>
 
-          <!-- Key Metrics Badges (Light Theme) -->
+          <!-- Core Capability Highlights -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-2xs">
-              <span class="block text-2xl sm:text-3xl font-syne font-extrabold text-slate-900">12.5M+</span>
-              <span class="text-[11px] font-mono text-slate-500 uppercase font-semibold">Safe Man-Hours</span>
+              <span class="block text-xl sm:text-2xl font-syne font-extrabold text-slate-900">Turnkey EPC</span>
+              <span class="text-[11px] font-mono text-slate-500 uppercase font-semibold">General Contracting</span>
             </div>
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-2xs">
-              <span class="block text-2xl sm:text-3xl font-syne font-extrabold text-amber-800">Class-1</span>
-              <span class="text-[11px] font-mono text-slate-500 uppercase font-semibold">CPWD / MoRTH Status</span>
+              <span class="block text-xl sm:text-2xl font-syne font-extrabold text-amber-800">Civil & Transit</span>
+              <span class="text-[11px] font-mono text-slate-500 uppercase font-semibold">Corridor Works</span>
             </div>
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-2xs">
-              <span class="block text-2xl sm:text-3xl font-syne font-extrabold text-slate-900">450+</span>
-              <span class="text-[11px] font-mono text-slate-500 uppercase font-semibold">Lane-Km Delivered</span>
+              <span class="block text-xl sm:text-2xl font-syne font-extrabold text-slate-900">IS & IRC</span>
+              <span class="text-[11px] font-mono text-slate-500 uppercase font-semibold">Standard Codes</span>
             </div>
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-2xs">
-              <span class="block text-2xl sm:text-3xl font-syne font-extrabold text-emerald-700">100%</span>
-              <span class="text-[11px] font-mono text-slate-500 uppercase font-semibold">CVC & NABL Adherence</span>
+              <span class="block text-xl sm:text-2xl font-syne font-extrabold text-emerald-700">100% Quality</span>
+              <span class="text-[11px] font-mono text-slate-500 uppercase font-semibold">Material Tested</span>
             </div>
           </div>
 
           <!-- Hero Action CTAs -->
           <div class="flex flex-wrap gap-3.5 pt-3">
-            <a href="/gov/tenders" class="px-6 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm rounded-xl transition-all duration-200 shadow-sm flex items-center">
-              <i data-lucide="file-search" class="w-4 h-4 mr-2 text-amber-400"></i>
-              View Active E-Tenders & RFPs
+            <a href="/gov/infrastructure" class="px-6 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm rounded-xl transition-all duration-200 shadow-sm flex items-center">
+              <i data-lucide="layers" class="w-4 h-4 mr-2 text-amber-400"></i>
+              Explore Infrastructure Sectors
             </a>
-            <a href="/gov/infrastructure" class="px-6 py-3.5 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm rounded-xl border border-slate-300 transition-all flex items-center shadow-xs">
-              <i data-lucide="layers" class="w-4 h-4 mr-2 text-blue-800"></i>
-              Explore Public Works Portfolio
+            <a href="/gov/liaison" class="px-6 py-3.5 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm rounded-xl border border-slate-300 transition-all flex items-center shadow-xs">
+              <i data-lucide="user-check" class="w-4 h-4 mr-2 text-blue-800"></i>
+              Nodal Contact Desk
             </a>
           </div>
         </div>
 
-        <!-- Right Hero Live Notice Panel (Light Theme) -->
+        <!-- Right Hero Information Card -->
         <div class="lg:col-span-5">
           <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-md space-y-5">
             <div class="flex items-center justify-between border-b border-slate-100 pb-3.5">
               <div class="flex items-center space-x-2.5">
                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                <h3 class="text-slate-900 font-syne font-bold text-base">Public Procurement Notice Board</h3>
+                <h3 class="text-slate-900 font-syne font-bold text-base">Public Works Overview</h3>
               </div>
-              <span class="text-[11px] font-mono bg-emerald-50 text-emerald-800 font-semibold px-2 py-0.5 rounded border border-emerald-200">
-                Live E-Procurement
+              <span class="text-[11px] font-mono bg-blue-50 text-blue-800 font-semibold px-2 py-0.5 rounded border border-blue-200">
+                Institutional Desk
               </span>
             </div>
 
-            <!-- Notice 1 -->
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-colors">
-              <div class="flex justify-between text-[11px] font-mono text-blue-900 font-semibold mb-1">
-                <span>Ref: NHAI-EXP/2026/042</span>
-                <span class="text-amber-800">Due: 25 Sep 2026</span>
+            <div class="space-y-3 text-xs text-slate-600">
+              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                <div class="font-bold text-slate-900 mb-1 flex items-center">
+                  <i data-lucide="file-check" class="w-4 h-4 text-emerald-600 mr-1.5"></i>
+                  Statutory & Technical Specifications
+                </div>
+                <p class="leading-relaxed">
+                  Execution adhering to Ministry and Bureau of Indian Standards (BIS) specifications, seismic design codes, and audited batch concrete standards.
+                </p>
               </div>
-              <h4 class="text-slate-900 font-semibold text-xs leading-snug">
-                6-Lane Access-Controlled Greenfield Expressway (Package-III)
-              </h4>
-              <p class="text-[11px] text-slate-500 mt-1">Estimated Value: ₹ 1,480 Cr • MoRTH / NHAI Standard</p>
-            </div>
 
-            <!-- Notice 2 -->
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-colors">
-              <div class="flex justify-between text-[11px] font-mono text-blue-900 font-semibold mb-1">
-                <span>Ref: MORTH-BRG/2026/018</span>
-                <span class="text-amber-800">Due: 05 Oct 2026</span>
+              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                <div class="font-bold text-slate-900 mb-1 flex items-center">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-700 mr-1.5"></i>
+                  Joint Venture & Subcontractor Prequalification
+                </div>
+                <p class="leading-relaxed">
+                  Open engagement with specialized partners, equipment suppliers, and testing agencies for public work tenders.
+                </p>
               </div>
-              <h4 class="text-slate-900 font-semibold text-xs leading-snug">
-                4.8 Km Extradosed 6-Lane River Bridge across Brahmaputra
-              </h4>
-              <p class="text-[11px] text-slate-500 mt-1">Estimated Value: ₹ 2,120 Cr • Zone V Seismic Design</p>
             </div>
 
             <!-- Nodal Desk Quick Access -->
             <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
-              <span class="text-slate-500 font-mono">Nodal Officer Direct Line:</span>
-              <a href="/gov/liaison" class="text-blue-900 hover:underline font-bold flex items-center">
-                Contact Desk <i data-lucide="chevron-right" class="w-3.5 h-3.5 ml-0.5"></i>
+              <span class="text-slate-500 font-mono">Direct Technical Office:</span>
+              <a href="tel:8822494773" class="text-blue-900 hover:underline font-bold flex items-center font-mono">
+                +91 8822494773 <i data-lucide="chevron-right" class="w-3.5 h-3.5 ml-0.5"></i>
               </a>
             </div>
           </div>
@@ -111,20 +108,20 @@ import GovProjectCard from '../../components/gov/GovProjectCard.astro';
     </div>
   </section>
 
-  <!-- Section 1: Official Empanellment & Statutory Accreditations -->
+  <!-- Section 1: Official Standards & Regulatory Framework -->
   <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
           <div class="inline-flex items-center text-xs font-mono uppercase tracking-wider text-amber-800 mb-2 font-bold">
-            <i data-lucide="award" class="w-3.5 h-3.5 mr-1.5 text-amber-700"></i> Statutory Contractor Empanelment
+            <i data-lucide="award" class="w-3.5 h-3.5 mr-1.5 text-amber-700"></i> Quality & Standards Framework
           </div>
           <h2 class="text-2xl sm:text-4xl font-syne font-extrabold text-slate-900 tracking-tight">
-            Accredited by National Infrastructure Authorities
+            Institutional Standards & Code Compliance
           </h2>
         </div>
         <p class="text-xs text-slate-600 max-w-md">
-          Pre-qualified Class-1 Special Category contractor with unrestricted bidding limits, certified financial solvency, and validated safety records.
+          Robust engineering governance adhering to national codes, structured quality assurance plans, and verified material testing.
         </p>
       </div>
 
@@ -159,8 +156,8 @@ import GovProjectCard from '../../components/gov/GovProjectCard.astro';
             Pavement Quality Concrete (PQC), deep sub-base stabilization, automatic slipform paving, and smart tolling infrastructure for high-density national corridors.
           </p>
           <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 flex justify-between">
-            <span>IRC:SP:84 Adherence</span>
-            <span class="text-amber-800 font-bold">450+ Lane Km</span>
+            <span>IRC Specifications</span>
+            <span class="text-amber-800 font-bold">Rigid Pavement</span>
           </div>
         </div>
 
@@ -174,7 +171,7 @@ import GovProjectCard from '../../components/gov/GovProjectCard.astro';
             Cable-stayed, extradosed, and balanced cantilever spans over tidal rivers and deep marine channels with specialized seismic isolation bearings.
           </p>
           <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 flex justify-between">
-            <span>Seismic Zone V Certified</span>
+            <span>Seismic Zone IV/V</span>
             <span class="text-blue-900 font-bold">Deep Caissons</span>
           </div>
         </div>
@@ -190,7 +187,7 @@ import GovProjectCard from '../../components/gov/GovProjectCard.astro';
           </p>
           <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 flex justify-between">
             <span>RDSO / IRS Standards</span>
-            <span class="text-emerald-800 font-bold">Heavy Gantries</span>
+            <span class="text-emerald-800 font-bold">Viaduct Spans</span>
           </div>
         </div>
 
@@ -199,13 +196,13 @@ import GovProjectCard from '../../components/gov/GovProjectCard.astro';
           <div class="h-12 w-12 rounded-xl bg-purple-50 border border-purple-200 text-purple-800 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
             <i data-lucide="landmark" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-slate-900 font-syne font-bold text-lg mb-2 group-hover:text-blue-900 transition-colors">Administrative & Judicial Complexes</h3>
+          <h3 class="text-slate-900 font-syne font-bold text-lg mb-2 group-hover:text-blue-900 transition-colors">Administrative & Institutional Complexes</h3>
           <p class="text-xs text-slate-600 leading-relaxed mb-4">
-            Turnkey institutional secretariats, high courts, university campuses, and civic centers engineered with GRIHA 5-Star net-zero parameters.
+            Turnkey institutional secretariats, educational campuses, judicial facilities, and civic centers engineered with green building parameters.
           </p>
           <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 flex justify-between">
-            <span>CPWD Plinth Norms</span>
-            <span class="text-purple-800 font-bold">GRIHA 5-Star</span>
+            <span>NBC 2016 Compliant</span>
+            <span class="text-purple-800 font-bold">Green Norms</span>
           </div>
         </div>
 
@@ -216,11 +213,11 @@ import GovProjectCard from '../../components/gov/GovProjectCard.astro';
           </div>
           <h3 class="text-slate-900 font-syne font-bold text-lg mb-2 group-hover:text-blue-900 transition-colors">Smart Water & Environmental Works</h3>
           <p class="text-xs text-slate-600 leading-relaxed mb-4">
-            Continuous 24x7 pressurized drinking water networks, SCADA pump houses, and Zero Liquid Discharge (ZLD) municipal sewage treatment plants.
+            Continuous pressurized drinking water distribution networks, SCADA pump houses, and Zero Liquid Discharge (ZLD) municipal sewage treatment plants.
           </p>
           <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 flex justify-between">
             <span>CPHEEO Norms</span>
-            <span class="text-cyan-800 font-bold">150+ MLD Network</span>
+            <span class="text-cyan-800 font-bold">Pipeline Networks</span>
           </div>
         </div>
 
@@ -229,38 +226,17 @@ import GovProjectCard from '../../components/gov/GovProjectCard.astro';
           <div class="h-12 w-12 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
             <i data-lucide="shield" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-slate-900 font-syne font-bold text-lg mb-2 group-hover:text-blue-900 transition-colors">Strategic & Defense Works</h3>
+          <h3 class="text-slate-900 font-syne font-bold text-lg mb-2 group-hover:text-blue-900 transition-colors">Strategic Logistics Corridors</h3>
           <p class="text-xs text-slate-600 leading-relaxed mb-4">
-            High-altitude all-weather military logistics roads, hardened aircraft shelters, specialized ammunition storage depots, and perimeter surveillance bastions.
+            All-weather logistics roads, reinforced avalanche snow-sheds, heavy equipment storage depots, and perimeter access infrastructure.
           </p>
           <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 flex justify-between">
-            <span>MES / BRO Specifications</span>
-            <span class="text-rose-800 font-bold">Zone V High-Altitude</span>
+            <span>Special Publications</span>
+            <span class="text-rose-800 font-bold">Heavy Load Design</span>
           </div>
         </div>
 
       </div>
-    </div>
-  </section>
-
-  <!-- Section 3: Active Tender Notice Board Preview -->
-  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-        <div>
-          <span class="inline-flex items-center text-xs font-mono uppercase tracking-wider text-amber-800 mb-2 font-bold">
-            <i data-lucide="file-text" class="w-3.5 h-3.5 mr-1.5 text-amber-700"></i> Public Procurement Gateway
-          </span>
-          <h2 class="text-2xl sm:text-4xl font-syne font-extrabold text-slate-900 tracking-tight">
-            Active E-Tenders & Expression of Interest (EOI)
-          </h2>
-        </div>
-        <a href="/gov/tenders" class="text-xs font-mono font-bold text-blue-900 hover:underline flex items-center">
-          Open Full E-Procurement Desk <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i>
-        </a>
-      </div>
-
-      <TenderBoard />
     </div>
   </section>
 
@@ -284,54 +260,57 @@ import GovProjectCard from '../../components/gov/GovProjectCard.astro';
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
         <GovProjectCard 
-          title="Brahmaputra Marine Expressway Bridge"
+          title="Heavy Civil River Span & Deep Foundation Bridge Works"
           category="Bridges & Marine"
-          authority="MoRTH / Assam PWD"
-          location="Guwahati Corridor"
-          status="Ahead of Schedule"
-          progress={78}
-          value="₹ 2,120.00 Cr"
-          lengthOrArea="6.4 Km River Span"
+          authority="Regional River Infrastructure"
+          location="North-East Corridors"
+          status="Engineering Execution"
+          progress={85}
+          value="Turnkey EPC"
+          lengthOrArea="Multi-Span River Crossing"
           specs={[
-            "M70 Self-Compacting Underwater Concrete",
-            "Seismic Zone V Base Dampeners",
-            "45m Deep Well Foundation Caissons"
+            "M60/M70 Self-Compacting Underwater Concrete",
+            "Seismic Zone V Base Isolation Dampeners",
+            "Deep Well Foundation Caissons & Piles"
           ]}
           codeCompliance="IRC:112 & IRC:SP:69"
+          image="/frames/frame_0010.jpg"
         />
 
         <GovProjectCard 
-          title="National Express Highway Corridor (Pkg IV)"
+          title="Rigid Concrete Access Highway & Corridor Development"
           category="Highways & Expressways"
-          authority="National Highways Authority (NHAI)"
-          location="Western Industrial Corridor"
+          authority="Highway Infrastructure Sector"
+          location="Industrial Corridor Links"
           status="Commissioned & Handed Over"
           progress={100}
-          value="₹ 1,480.00 Cr"
-          lengthOrArea="48.5 Km (6-Lane Dual PQC)"
+          value="EPC Model"
+          lengthOrArea="Dual-Carriageway PQC Corridor"
           specs={[
             "Slipform Paving with Dowel Bar Inserter",
-            "Automated Weigh-In-Motion Sensors",
-            "100% Rainwater Harvesting Swales"
+            "Pavement Quality Concrete (PQC) Construction",
+            "Continuous Drainage Swales & Embankments"
           ]}
-          codeCompliance="IRC:SP:84-2019"
+          codeCompliance="IRC:SP:84 Standards"
+          image="/frames/frame_0050.jpg"
         />
 
         <GovProjectCard 
-          title="State Integrated Secretariat & High Court Annex"
-          category="Administrative Complex"
-          authority="Central Public Works Dept (CPWD)"
-          location="Capital Administrative Zone"
-          status="Final Finishing Stage"
+          title="Integrated Administrative Complex & Civic Facilities"
+          category="Institutional Complex"
+          authority="Public Infrastructure Division"
+          location="Regional Administrative Zone"
+          status="Finishing & Testing"
           progress={92}
-          value="₹ 620.00 Cr"
-          lengthOrArea="1,250,000 Sq. Ft. Built-up"
+          value="Turnkey Civil"
+          lengthOrArea="Multi-Storey Structural RCC Frame"
           specs={[
-            "GRIHA 5-Star Net-Zero Carbon Standard",
-            "Post-Tensioned Column-Free Halls",
-            "Integrated Dual-Power SCADA BMS"
+            "Energy Efficient Sustainable Envelope",
+            "Post-Tensioned Column-Free Conference Halls",
+            "Integrated Central Building Automation"
           ]}
           codeCompliance="CPWD & NBC 2016"
+          image="/frames/frame_0110.jpg"
         />
 
       </div>
@@ -363,11 +342,11 @@ import GovProjectCard from '../../components/gov/GovProjectCard.astro';
         <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
           <a href="/gov/liaison" class="px-6 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl transition-all shadow-sm flex items-center justify-center font-mono whitespace-nowrap">
             <i data-lucide="user-check" class="w-4 h-4 mr-2 text-amber-400"></i>
-            Schedule Nodal Protocol Briefing
+            Schedule Protocol Briefing
           </a>
-          <a href="mailto:gov.epc@edlconstructionpvtltd.in" class="px-6 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs rounded-xl border border-slate-300 transition-colors flex items-center justify-center font-mono whitespace-nowrap">
+          <a href="mailto:contact@edlconstructionpvtltd.in" class="px-6 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs rounded-xl border border-slate-300 transition-colors flex items-center justify-center font-mono whitespace-nowrap">
             <i data-lucide="mail" class="w-4 h-4 mr-2 text-slate-600"></i>
-            Official Email Dispatch
+            Official Email Inquiry
           </a>
         </div>
       </div>
