@@ -1,0 +1,11 @@
+name = "edl-gov-subdomain-router"
+main = "workers/subdomain-router.js"
+compatibility_date = "2024-04-01"
+
+[vars]
+ORIGIN_HOSTNAME = "edlconstructionpvtltd.in"
+
+# Route traffic for the government subdomain:
+# routes = [
+#   { pattern = "gov.edlconstructionpvtltd.in/*", zone_name = "edlconstructionpvtltd.in" }
+# ]

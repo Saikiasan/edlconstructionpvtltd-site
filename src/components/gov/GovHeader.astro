@@ -11,17 +11,12 @@ const { activeGovPage = 'overview' } = Astro.props;
   <div class="flex items-center space-x-3 sm:space-x-4 flex-wrap gap-y-1">
     <span class="inline-flex items-center text-amber-800 font-semibold tracking-wide">
       <i data-lucide="landmark" class="w-3.5 h-3.5 mr-1.5 text-amber-700"></i>
-      Govt. Empanelled Class-1 (Super) EPC Contractor
+      Public Sector & Infrastructure EPC Division
     </span>
     <span class="hidden md:inline-block text-slate-300">|</span>
     <span class="hidden md:inline-flex items-center text-slate-600">
       <i data-lucide="shield-check" class="w-3.5 h-3.5 mr-1 text-emerald-600"></i>
-      GeM Seller ID: GEM-EDL-2026 • CVC Integrity Certified
-    </span>
-    <span class="hidden xl:inline-block text-slate-300">|</span>
-    <span class="hidden xl:inline-flex items-center text-slate-600">
-      <i data-lucide="award" class="w-3.5 h-3.5 mr-1 text-blue-700"></i>
-      ISO 9001:2015 • ISO 14001:2015 • ISO 45001:2018
+      Engineering & Turnkey Infrastructure
     </span>
   </div>
 
@@ -43,36 +38,27 @@ const { activeGovPage = 'overview' } = Astro.props;
 <header class="sticky top-0 z-50 bg-white/98 backdrop-blur-md border-b border-slate-200 text-slate-900 shadow-sm transition-all duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
     
-    <!-- Brand Logo with Government Division Sub-label -->
+    <!-- Clean Brand Logo with Government Division Sub-label -->
     <a href="/gov" class="flex items-center space-x-3.5 group">
-      <div class="h-12 w-12 rounded-xl bg-white p-1 border border-slate-300 shadow-xs flex items-center justify-center overflow-hidden flex-shrink-0 group-hover:border-amber-600 transition-colors">
+      <div class="h-11 w-11 rounded-xl bg-white p-1 border border-slate-300 shadow-xs flex items-center justify-center overflow-hidden flex-shrink-0 group-hover:border-amber-600 transition-colors">
         <img src="/logo.jpeg" alt="EDL Logo" class="h-full w-full object-contain" />
       </div>
       <div class="flex flex-col">
-        <div class="flex items-center space-x-2">
-          <span class="font-syne font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 leading-none group-hover:text-blue-900 transition-colors">
-            EDL <span class="text-amber-700">INFRASTRUCTURE</span>
-          </span>
-          <span class="bg-amber-100 text-amber-900 text-[10px] font-mono font-bold px-1.5 py-0.5 rounded border border-amber-300 uppercase">
-            Govt. EPC
-          </span>
-        </div>
+        <span class="font-syne font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 leading-none group-hover:text-blue-900 transition-colors">
+          EDL <span class="text-amber-700">INFRASTRUCTURE</span>
+        </span>
         <span class="text-[9px] tracking-[0.2em] text-slate-500 uppercase font-mono font-semibold mt-1">
-          PUBLIC WORKS & NATION BUILDING DIVISION
+          PUBLIC WORKS & INFRASTRUCTURE DIVISION
         </span>
       </div>
     </a>
 
-    <!-- Desktop Navigation -->
-    <nav class="hidden lg:flex items-center space-x-6 xl:space-x-7 text-[13.5px] font-medium text-slate-700">
+    <!-- Simplified, Clean Desktop Navigation -->
+    <nav class="hidden lg:flex items-center space-x-7 text-[14px] font-medium text-slate-700">
       <a href="/gov" class={activeGovPage === 'overview' ? 'text-blue-900 font-bold border-b-2 border-amber-600 pb-1' : 'hover:text-blue-900 transition-colors'}>Overview</a>
-      <a href="/gov/infrastructure" class={activeGovPage === 'infrastructure' ? 'text-blue-900 font-bold border-b-2 border-amber-600 pb-1' : 'hover:text-blue-900 transition-colors'}>Public Infra</a>
-      <a href="/gov/tenders" class={activeGovPage === 'tenders' ? 'text-blue-900 font-bold border-b-2 border-amber-600 pb-1 flex items-center' : 'hover:text-blue-900 transition-colors flex items-center'}>
-        <span>Active Tenders</span>
-        <span class="ml-1.5 bg-emerald-100 text-emerald-800 text-[10px] px-1.5 py-0.2 rounded-full border border-emerald-300 font-mono font-semibold">Live</span>
-      </a>
-      <a href="/gov/compliance" class={activeGovPage === 'compliance' ? 'text-blue-900 font-bold border-b-2 border-amber-600 pb-1' : 'hover:text-blue-900 transition-colors'}>Compliance & QA</a>
-      <a href="/gov/telemetry" class={activeGovPage === 'telemetry' ? 'text-blue-900 font-bold border-b-2 border-amber-600 pb-1' : 'hover:text-blue-900 transition-colors'}>Live Telemetry</a>
+      <a href="/gov/infrastructure" class={activeGovPage === 'infrastructure' ? 'text-blue-900 font-bold border-b-2 border-amber-600 pb-1' : 'hover:text-blue-900 transition-colors'}>Infrastructure</a>
+      <a href="/gov/tenders" class={activeGovPage === 'tenders' ? 'text-blue-900 font-bold border-b-2 border-amber-600 pb-1' : 'hover:text-blue-900 transition-colors'}>Tenders & RFPs</a>
+      <a href="/gov/compliance" class={activeGovPage === 'compliance' ? 'text-blue-900 font-bold border-b-2 border-amber-600 pb-1' : 'hover:text-blue-900 transition-colors'}>Compliance</a>
       <a href="/gov/liaison" class={activeGovPage === 'liaison' ? 'text-blue-900 font-bold border-b-2 border-amber-600 pb-1' : 'hover:text-blue-900 transition-colors'}>Nodal Desk</a>
     </nav>
 
@@ -92,18 +78,14 @@ const { activeGovPage = 'overview' } = Astro.props;
   <div id="govMobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-5 shadow-xl transition-all">
     <nav class="flex flex-col space-y-3 text-sm font-semibold text-slate-800">
       <a href="/gov" class={activeGovPage === 'overview' ? 'text-amber-800 font-bold' : 'hover:text-blue-900 transition-colors'}>Overview</a>
-      <a href="/gov/infrastructure" class={activeGovPage === 'infrastructure' ? 'text-amber-800 font-bold' : 'hover:text-blue-900 transition-colors'}>Public Infrastructure Showcase</a>
-      <a href="/gov/tenders" class={activeGovPage === 'tenders' ? 'text-amber-800 font-bold flex items-center justify-between' : 'hover:text-blue-900 transition-colors flex items-center justify-between'}>
-        <span>E-Tenders & EOI Notice Board</span>
-        <span class="bg-emerald-100 text-emerald-800 text-[10px] px-2 py-0.5 rounded-full border border-emerald-300 font-mono">Active</span>
-      </a>
-      <a href="/gov/compliance" class={activeGovPage === 'compliance' ? 'text-amber-800 font-bold' : 'hover:text-blue-900 transition-colors'}>Statutory Compliance & Vigilance</a>
-      <a href="/gov/telemetry" class={activeGovPage === 'telemetry' ? 'text-amber-800 font-bold' : 'hover:text-blue-900 transition-colors'}>Public Works Telemetry & Milestones</a>
-      <a href="/gov/liaison" class={activeGovPage === 'liaison' ? 'text-amber-800 font-bold' : 'hover:text-blue-900 transition-colors'}>Nodal Officer & Ministry Liaison Desk</a>
+      <a href="/gov/infrastructure" class={activeGovPage === 'infrastructure' ? 'text-amber-800 font-bold' : 'hover:text-blue-900 transition-colors'}>Infrastructure Portfolio</a>
+      <a href="/gov/tenders" class={activeGovPage === 'tenders' ? 'text-amber-800 font-bold' : 'hover:text-blue-900 transition-colors'}>Tenders & RFPs</a>
+      <a href="/gov/compliance" class={activeGovPage === 'compliance' ? 'text-amber-800 font-bold' : 'hover:text-blue-900 transition-colors'}>Compliance & QA</a>
+      <a href="/gov/liaison" class={activeGovPage === 'liaison' ? 'text-amber-800 font-bold' : 'hover:text-blue-900 transition-colors'}>Nodal Officer Desk</a>
       
       <div class="pt-3 border-t border-slate-200 space-y-2">
         <a href="/gov/tenders#submit-eoi" class="w-full text-center py-2.5 text-xs font-bold text-white bg-slate-900 rounded-lg shadow-sm block">
-          Submit EOI / Joint Venture Application
+          Submit EOI / Bid Application
         </a>
         <a href="/" class="w-full text-center py-2 text-xs font-medium text-slate-700 bg-slate-100 rounded-lg border border-slate-300 block hover:text-slate-900">
           ← Switch to EDL Corporate Website

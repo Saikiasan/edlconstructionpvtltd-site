@@ -10,13 +10,13 @@ import GovLayout from '../../layouts/GovLayout.astro';
       <div class="max-w-3xl space-y-4">
         <div class="inline-flex items-center space-x-2 bg-emerald-50 border border-emerald-200 rounded-full px-3 py-1 text-xs font-mono text-emerald-900 font-semibold shadow-2xs">
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse mr-1"></span>
-          REAL-TIME NODAL TELEMETRY & AUDIT GATEWAY
+          QUALITY ASSURANCE & DIGITAL AUDIT INTERFACE
         </div>
         <h1 class="text-3xl sm:text-5xl font-syne font-extrabold text-slate-900 tracking-tight">
           Public Works Telemetry & Milestone Tracker
         </h1>
         <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
-          An auditable, transparent monitoring interface for Ministry Nodal Officers, Project Management Consultants (PMC), and Government Quality Monitors to verify physical milestones, RFI clearances, and concrete batch telemetry in real time.
+          An illustrative digital monitoring dashboard showcasing our automated reporting protocol for Nodal Officers, Project Management Consultants (PMC), and Quality Monitors to verify physical milestones, RFI clearances, and concrete batch telemetry.
         </p>
       </div>
     </div>
@@ -35,7 +35,7 @@ import GovLayout from '../../layouts/GovLayout.astro';
           <div>
             <span class="text-[11px] font-mono text-slate-500 block uppercase font-semibold">Monitoring Active Contract</span>
             <h2 class="text-slate-900 font-syne font-bold text-lg sm:text-xl" id="activeProjectTitle">
-              Brahmaputra Marine Expressway Bridge (Package I)
+              Regional River Bridge Viaduct (Package I)
             </h2>
           </div>
         </div>
@@ -44,10 +44,10 @@ import GovLayout from '../../layouts/GovLayout.astro';
         <div class="flex items-center space-x-3">
           <label class="text-xs font-mono text-slate-600 hidden sm:inline-block font-semibold">Select Project:</label>
           <select id="telemetryProjectSelect" class="bg-slate-50 text-slate-900 text-xs font-mono px-4 py-2.5 rounded-lg border border-slate-300 focus:border-blue-600 focus:bg-white focus:outline-none">
-            <option value="brahmaputra">Brahmaputra Marine Bridge (₹ 2,120 Cr)</option>
-            <option value="expressway">Western Greenfield Expressway (₹ 1,480 Cr)</option>
-            <option value="metro">Metro Line Viaduct & 8 Stations (₹ 945 Cr)</option>
-            <option value="secretariat">State Integrated Secretariat Complex (₹ 620 Cr)</option>
+            <option value="brahmaputra">Regional River Bridge Viaduct (Package I)</option>
+            <option value="expressway">Access-Controlled Highway Corridor (Pkg IV)</option>
+            <option value="metro">Elevated Mass Transit Viaduct & Stations</option>
+            <option value="secretariat">Integrated Administrative Complex</option>
           </select>
         </div>
       </div>
@@ -194,7 +194,7 @@ import GovLayout from '../../layouts/GovLayout.astro';
             </div>
 
             <div class="relative h-44 rounded-lg overflow-hidden bg-slate-100 border border-slate-200">
-              <img src="/frames/frame_0001.png" alt="Drone Survey Aerial" class="w-full h-full object-cover" />
+              <img src="/frames/frame_0001.jpg" alt="Drone Survey Aerial" class="w-full h-full object-cover" />
               <div class="absolute inset-0 bg-slate-900/40 flex items-center justify-center">
                 <span class="px-3 py-1.5 rounded-lg bg-white/95 text-slate-900 text-xs font-mono border border-slate-200 shadow-xs flex items-center font-semibold">
                   <i data-lucide="crosshair" class="w-3.5 h-3.5 mr-1.5 text-emerald-600"></i>
@@ -274,25 +274,25 @@ import GovLayout from '../../layouts/GovLayout.astro';
 
   const projectData = {
     brahmaputra: {
-      title: "Brahmaputra Marine Expressway Bridge (Package I)",
+      title: "Regional River Bridge Viaduct (Package I)",
       physical: "78.4%",
       financial: "74.2%",
       rfi: "1,482 / 1,490"
     },
     expressway: {
-      title: "Western Access-Controlled Greenfield Highway (Pkg IV)",
+      title: "Access-Controlled Highway Corridor (Pkg IV)",
       physical: "100.0%",
       financial: "100.0%",
       rfi: "2,840 / 2,840"
     },
     metro: {
-      title: "Metropolitan Elevated Metro Line Viaduct & 8 Stations",
+      title: "Elevated Mass Transit Viaduct & Stations",
       physical: "64.2%",
       financial: "61.0%",
       rfi: "980 / 992"
     },
     secretariat: {
-      title: "Integrated State Secretariat & High Court Annexure",
+      title: "Integrated Administrative Complex",
       physical: "92.0%",
       financial: "89.5%",
       rfi: "1,210 / 1,215"

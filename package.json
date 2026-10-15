@@ -12,7 +12,8 @@
     "astro": "astro",
     "deploy:corp": "node scripts/deploy-corp.mjs",
     "deploy:gov": "node scripts/deploy-gov.mjs",
-    "deploy:all": "node scripts/deploy-all.mjs"
+    "deploy:all": "node scripts/deploy-all.mjs",
+    "deploy:worker": "npx wrangler deploy"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.5",
