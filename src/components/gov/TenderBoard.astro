@@ -1,0 +1,302 @@
+---
+const tenders = [
+  {
+    refNo: "EDL/GOV/NHAI-EXP/2026/042",
+    title: "Construction of 6-Lane Access-Controlled Greenfield Expressway Corridor (Package-III: Km 124+000 to Km 172+400)",
+    authority: "National Highways Authority of India (NHAI)",
+    category: "Highways & Expressways",
+    categoryKey: "highways",
+    status: "Live - Open for Bidding",
+    statusType: "live",
+    estValue: "₹ 1,480.00 Cr",
+    emdAmount: "₹ 14.80 Cr",
+    publishDate: "15 Aug 2026",
+    preBidMeeting: "02 Sep 2026 (11:00 IST)",
+    submissionDeadline: "25 Sep 2026 (15:00 IST)",
+    techOpening: "26 Sep 2026 (15:30 IST)",
+    corrigendumCount: 1,
+    docSize: "18.4 MB (ZIP / PDF)"
+  },
+  {
+    refNo: "EDL/GOV/MORTH-BRG/2026/018",
+    title: "Engineering, Procurement & Construction (EPC) of 4.8 Km Extradosed 6-Lane River Bridge with Approach Viaducts across Brahmaputra Corridor",
+    authority: "Ministry of Road Transport & Highways (MoRTH)",
+    category: "Bridges & Marine",
+    categoryKey: "bridges",
+    status: "Live - Open for Bidding",
+    statusType: "live",
+    estValue: "₹ 2,120.00 Cr",
+    emdAmount: "₹ 21.20 Cr",
+    publishDate: "20 Aug 2026",
+    preBidMeeting: "08 Sep 2026 (14:30 IST)",
+    submissionDeadline: "05 Oct 2026 (17:00 IST)",
+    techOpening: "06 Oct 2026 (11:00 IST)",
+    corrigendumCount: 2,
+    docSize: "24.6 MB (ZIP / PDF)"
+  },
+  {
+    refNo: "EDL/GOV/MMRC-METRO/2026/009",
+    title: "Design and Construction of Elevated Metro Viaduct (9.6 Km) including 8 Elevated Stations with Integrated Multimodal Interchange",
+    authority: "Mumbai Metro Rail Corporation / MahaMetro",
+    category: "Rail & Metro Transit",
+    categoryKey: "transit",
+    status: "Technical Evaluation",
+    statusType: "evaluation",
+    estValue: "₹ 945.50 Cr",
+    emdAmount: "₹ 9.45 Cr",
+    publishDate: "02 Jul 2026",
+    preBidMeeting: "Completed",
+    submissionDeadline: "Completed (18 Aug 2026)",
+    techOpening: "Underway",
+    corrigendumCount: 3,
+    docSize: "32.1 MB (Archived)"
+  },
+  {
+    refNo: "EDL/GOV/CPWD-ADM/2026/031",
+    title: "Comprehensive Turnkey EPC Construction of State Integrated Administrative Complex & High-Court Annexure (G+18 Stories, GRIHA 5-Star)",
+    authority: "Central Public Works Department (CPWD)",
+    category: "Institutional Complexes",
+    categoryKey: "institutional",
+    status: "Live - Open for Bidding",
+    statusType: "live",
+    estValue: "₹ 620.00 Cr",
+    emdAmount: "₹ 6.20 Cr",
+    publishDate: "10 Aug 2026",
+    preBidMeeting: "04 Sep 2026 (15:00 IST)",
+    submissionDeadline: "28 Sep 2026 (14:00 IST)",
+    techOpening: "29 Sep 2026 (15:00 IST)",
+    corrigendumCount: 0,
+    docSize: "14.2 MB (ZIP / PDF)"
+  },
+  {
+    refNo: "EDL/GOV/SMC-WTR/2026/014",
+    title: "Implementation of 150 MLD 24x7 Water Supply Distribution Network and 60 MLD Zero-Liquid Discharge Sewage Treatment Plant with SCADA Telemetry",
+    authority: "Smart City Development Mission / State Water Board",
+    category: "Smart Water & Utilities",
+    categoryKey: "water",
+    status: "Live - Open for Bidding",
+    statusType: "live",
+    estValue: "₹ 385.00 Cr",
+    emdAmount: "₹ 3.85 Cr",
+    publishDate: "22 Aug 2026",
+    preBidMeeting: "12 Sep 2026 (11:30 IST)",
+    submissionDeadline: "10 Oct 2026 (16:00 IST)",
+    techOpening: "11 Oct 2026 (11:00 IST)",
+    corrigendumCount: 1,
+    docSize: "16.8 MB (ZIP / PDF)"
+  },
+  {
+    refNo: "EDL/GOV/BRO-STRAT/2026/004",
+    title: "Construction of All-Weather Border Strategic Defense Logistics Bypass Road (38.5 Km, Double-Lane Heavy Loading with 2 Snow-Sheds)",
+    authority: "Border Roads & Strategic Infrastructure Authority",
+    category: "Strategic & Defense Works",
+    categoryKey: "strategic",
+    status: "Awarded / Under Execution",
+    statusType: "awarded",
+    estValue: "₹ 810.00 Cr",
+    emdAmount: "Secured",
+    publishDate: "15 Jan 2026",
+    preBidMeeting: "Completed",
+    submissionDeadline: "Completed",
+    techOpening: "Execution Stage",
+    corrigendumCount: 2,
+    docSize: "Restricted Access"
+  }
+];
+---
+
+<div class="space-y-6">
+  
+  <!-- Search & Filter Controls Bar (Light Theme) -->
+  <div class="bg-white p-4 sm:p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center">
+    
+    <!-- Search Box -->
+    <div class="relative flex-1 max-w-md">
+      <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+      <input 
+        type="text" 
+        id="tenderSearchInput"
+        placeholder="Search by Tender Ref, Keyword, or Authority..." 
+        class="w-full bg-slate-50 text-slate-900 text-xs rounded-lg pl-10 pr-4 py-2.5 border border-slate-300 focus:border-blue-600 focus:bg-white focus:outline-none placeholder:text-slate-400 font-sans"
+      />
+    </div>
+
+    <!-- Category Pill Filters -->
+    <div class="flex items-center space-x-2 overflow-x-auto pb-1 md:pb-0 text-xs" id="tenderFilterContainer">
+      <button data-filter="all" class="tender-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 text-white font-bold transition-all whitespace-nowrap shadow-xs">
+        All Notices ({tenders.length})
+      </button>
+      <button data-filter="highways" class="tender-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200 transition-all whitespace-nowrap">
+        Highways
+      </button>
+      <button data-filter="bridges" class="tender-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200 transition-all whitespace-nowrap">
+        Bridges & Marine
+      </button>
+      <button data-filter="transit" class="tender-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200 transition-all whitespace-nowrap">
+        Metro/Rail
+      </button>
+      <button data-filter="institutional" class="tender-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200 transition-all whitespace-nowrap">
+        Institutional
+      </button>
+      <button data-filter="water" class="tender-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200 transition-all whitespace-nowrap">
+        Water/Utilities
+      </button>
+    </div>
+  </div>
+
+  <!-- Tender Cards List (Light Theme) -->
+  <div class="space-y-4" id="tendersGrid">
+    {tenders.map((tender) => (
+      <div 
+        class="tender-card bg-white border border-slate-200 hover:border-slate-300 rounded-xl p-5 sm:p-6 transition-all duration-200 shadow-xs hover:shadow-md"
+        data-category={tender.categoryKey}
+        data-search={`${tender.refNo} ${tender.title} ${tender.authority} ${tender.category}`.toLowerCase()}
+      >
+        <!-- Top Info Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-3.5 border-b border-slate-100">
+          <div class="flex items-center space-x-3 flex-wrap gap-y-1">
+            <span class="font-mono text-xs font-bold text-blue-900 bg-blue-50 px-2.5 py-0.5 rounded border border-blue-200">
+              {tender.refNo}
+            </span>
+            <span class="text-xs font-mono text-slate-500">
+              Published: {tender.publishDate}
+            </span>
+            {tender.corrigendumCount > 0 && (
+              <span class="text-[10px] font-mono bg-amber-50 text-amber-900 px-2 py-0.5 rounded border border-amber-200 font-semibold">
+                Corrigendum #{tender.corrigendumCount} Issued
+              </span>
+            )}
+          </div>
+
+          <!-- Status Badge -->
+          <div>
+            {tender.statusType === 'live' && (
+              <span class="inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 font-mono">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2"></span>
+                {tender.status}
+              </span>
+            )}
+            {tender.statusType === 'evaluation' && (
+              <span class="inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-200 font-mono">
+                <i data-lucide="clock" class="w-3.5 h-3.5 mr-1.5 text-amber-700"></i>
+                {tender.status}
+              </span>
+            )}
+            {tender.statusType === 'awarded' && (
+              <span class="inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full bg-blue-50 text-blue-900 border border-blue-200 font-mono">
+                <i data-lucide="check-check" class="w-3.5 h-3.5 mr-1.5 text-blue-700"></i>
+                {tender.status}
+              </span>
+            )}
+          </div>
+        </div>
+
+        <!-- Tender Title & Authority -->
+        <div class="py-3.5">
+          <div class="flex items-center text-xs font-mono text-slate-500 mb-1.5 space-x-2">
+            <i data-lucide="building-2" class="w-3.5 h-3.5 text-amber-700"></i>
+            <span class="font-medium text-slate-700">{tender.authority}</span>
+            <span>•</span>
+            <span class="text-slate-600">{tender.category}</span>
+          </div>
+          <h3 class="text-slate-900 font-syne font-bold text-base sm:text-lg leading-snug hover:text-blue-900 transition-colors">
+            {tender.title}
+          </h3>
+        </div>
+
+        <!-- Specifications & Key Deadlines Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-3.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-mono mb-4">
+          <div>
+            <span class="text-slate-500 block text-[10px] uppercase">Est. Value:</span>
+            <strong class="text-amber-800 text-sm">{tender.estValue}</strong>
+          </div>
+          <div>
+            <span class="text-slate-500 block text-[10px] uppercase">EMD / Security:</span>
+            <strong class="text-slate-800">{tender.emdAmount}</strong>
+          </div>
+          <div>
+            <span class="text-slate-500 block text-[10px] uppercase">Pre-Bid Meeting:</span>
+            <span class="text-slate-700">{tender.preBidMeeting}</span>
+          </div>
+          <div>
+            <span class="text-slate-500 block text-[10px] uppercase">Submission Due:</span>
+            <strong class="text-red-700">{tender.submissionDeadline}</strong>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
+          <div class="flex items-center space-x-3 text-xs text-slate-600">
+            <span class="flex items-center">
+              <i data-lucide="file-text" class="w-3.5 h-3.5 mr-1 text-slate-400"></i>
+              NIT, RFP & BOQ ({tender.docSize})
+            </span>
+          </div>
+
+          <div class="flex items-center space-x-2.5">
+            <button 
+              type="button" 
+              onclick={`alert('Downloading Technical NIT & Tender Specification Pack for ${tender.refNo}');`}
+              class="px-3.5 py-1.5 rounded-lg bg-white hover:bg-slate-50 text-slate-700 text-xs font-medium border border-slate-300 flex items-center transition-colors shadow-2xs"
+            >
+              <i data-lucide="download" class="w-3.5 h-3.5 mr-1.5 text-slate-500"></i>
+              Download NIT
+            </button>
+            <a 
+              href="#submit-eoi" 
+              onclick={`document.getElementById('tenderRefInput').value = '${tender.refNo}';`}
+              class="px-4 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center transition-all shadow-xs"
+            >
+              <i data-lucide="send" class="w-3.5 h-3.5 mr-1.5 text-amber-400"></i>
+              Apply / Submit EOI
+            </a>
+          </div>
+        </div>
+
+      </div>
+    ))}
+  </div>
+</div>
+
+<script is:inline>
+  const searchInput = document.getElementById('tenderSearchInput');
+  const filterButtons = document.querySelectorAll('.tender-filter-btn');
+  const tenderCards = document.querySelectorAll('.tender-card');
+  let currentCategory = 'all';
+
+  function filterTenders() {
+    const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+    tenderCards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+      const cardSearch = card.getAttribute('data-search') || '';
+
+      const matchesCategory = (currentCategory === 'all' || cardCategory === currentCategory);
+      const matchesSearch = (!searchTerm || cardSearch.includes(searchTerm));
+
+      if (matchesCategory && matchesSearch) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', filterTenders);
+  }
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => {
+        b.classList.remove('bg-slate-900', 'text-white', 'font-bold', 'shadow-xs');
+        b.classList.add('bg-slate-100', 'text-slate-700');
+      });
+      btn.classList.add('bg-slate-900', 'text-white', 'font-bold', 'shadow-xs');
+      btn.classList.remove('bg-slate-100', 'text-slate-700');
+
+      currentCategory = btn.getAttribute('data-filter') || 'all';
+      filterTenders();
+    });
+  });
+</script>

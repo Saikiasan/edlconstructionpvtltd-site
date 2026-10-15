@@ -1,0 +1,334 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="EDL Constructions | Design. Build. Deliver. | Engineering & Turnkey Infrastructure">
+  <Header activePage="home" />
+
+  <!-- ========================================================================= -->
+  <!-- FIXED FULLSCREEN CANVAS BACKGROUND (TIED TO PAGE SCROLL) -->
+  <!-- ========================================================================= -->
+  <div class="fixed inset-0 w-full h-full z-0 overflow-hidden pointer-events-none bg-[#0F172A]">
+    <canvas id="scrollCanvas" class="w-full h-full object-cover block opacity-85"></canvas>
+    
+    <!-- Balanced tint layer with transparency (preserves visibility while boosting text legibility) -->
+    <div class="absolute inset-0 bg-[#0F172A]/35 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0F172A]/50 via-transparent to-[#0F172A]/70 pointer-events-none"></div>
+  </div>
+
+  <!-- Progress Bar (Fixed Subtle Indicator) -->
+  <div class="fixed top-20 inset-x-0 h-1 z-50 pointer-events-none bg-slate-800/40">
+    <div id="scrollProgressBar" class="h-full bg-[#EA580C] w-0 transition-all duration-75"></div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- SCROLLABLE PAGE CONTENT (FLOATING OVER THE FIXED CANVAS) -->
+  <!-- ========================================================================= -->
+  <div id="pageContainer" class="relative z-10 w-full">
+    
+    <!-- 1. HERO SECTION -->
+    <section class="min-h-[92vh] flex items-center justify-center px-6 sm:px-8 py-20 text-white select-none">
+      <div class="max-w-5xl mx-auto text-center space-y-6">
+        
+        <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-slate-950/80 border border-[#0369A1]/60 text-[#0369A1] text-xs font-mono font-bold tracking-widest uppercase shadow-2xl backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-[#0369A1] animate-ping"></span>
+          <span>DESIGN • BUILD • DELIVER</span>
+        </div>
+
+        <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-normal leading-tight text-white drop-shadow-2xl">
+          Constructing With <br />
+          <span class="italic font-light text-sky-400">Engineering Excellence</span>
+        </h1>
+
+        <p class="max-w-2xl mx-auto text-slate-200 text-sm sm:text-base font-light leading-relaxed drop-shadow">
+          Turnkey civil engineering, commercial superstructures, and robust infrastructure developments across India delivered with rigorous quality standards.
+        </p>
+
+        <div class="pt-4 flex flex-wrap justify-center items-center gap-4">
+          <a href="/contact" class="px-8 py-4 bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-xl inline-flex items-center">
+            Contact Now <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+          </a>
+          <a href="/portfolio" class="px-7 py-4 bg-slate-900/90 hover:bg-slate-800 text-white font-semibold text-xs rounded-xl border border-slate-700 transition-all backdrop-blur-md inline-flex items-center">
+            Explore Capabilities <i data-lucide="chevron-right" class="w-4 h-4 ml-1 text-[#0369A1]"></i>
+          </a>
+        </div>
+
+        <!-- Scroll down indicator prompt -->
+        <div class="pt-8 flex flex-col items-center justify-center space-y-2 text-slate-400 font-mono text-xs animate-bounce opacity-80">
+          <span>Scroll down to navigate architectural frames</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 text-[#0369A1]"></i>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. CORE CAPABILITIES OVERVIEW BAND -->
+    <section class="py-16 px-4 sm:px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-[#0F172A]/85 backdrop-blur-md border border-slate-700 text-white shadow-xl space-y-2 hover:border-[#0369A1] transition-all">
+          <div class="h-10 w-10 rounded-xl bg-[#0369A1]/20 text-[#0369A1] flex items-center justify-center font-mono font-bold">01</div>
+          <h3 class="font-bold text-base text-white">Structural Civil</h3>
+          <p class="text-xs text-slate-300 font-light">Deep foundations, high-grade ready-mix concrete, and earthquake-resistant detailing.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#0F172A]/85 backdrop-blur-md border border-slate-700 text-white shadow-xl space-y-2 hover:border-[#0369A1] transition-all">
+          <div class="h-10 w-10 rounded-xl bg-[#0369A1]/20 text-[#0369A1] flex items-center justify-center font-mono font-bold">02</div>
+          <h3 class="font-bold text-base text-white">Commercial Towers</h3>
+          <p class="text-xs text-slate-300 font-light">Large-span floor layouts, unitized facade envelopes, and integrated MEP systems.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#0F172A]/85 backdrop-blur-md border border-slate-700 text-white shadow-xl space-y-2 hover:border-[#0369A1] transition-all">
+          <div class="h-10 w-10 rounded-xl bg-[#0369A1]/20 text-[#0369A1] flex items-center justify-center font-mono font-bold">03</div>
+          <h3 class="font-bold text-base text-white">Heavy Infrastructure</h3>
+          <p class="text-xs text-slate-300 font-light">PQC concrete paving, long-span bridge viaducts, and arterial civil transport corridors.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#0F172A]/85 backdrop-blur-md border border-slate-700 text-white shadow-xl space-y-2 hover:border-[#0369A1] transition-all">
+          <div class="h-10 w-10 rounded-xl bg-[#0369A1]/20 text-[#0369A1] flex items-center justify-center font-mono font-bold">04</div>
+          <h3 class="font-bold text-base text-white">Industrial & PEB</h3>
+          <p class="text-xs text-slate-300 font-light">Engineered logistics parks, laser-screed flooring, and turnkey industrial warehousing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. INTERACTIVE BLUEPRINT COST ESTIMATOR WORKBENCH -->
+    <section class="py-20 sm:py-24 px-4 sm:px-8 text-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-3xl mb-12">
+          <span class="text-[#0369A1] text-xs font-mono uppercase font-bold tracking-widest block mb-2">
+            INSTANT TURNKEY ESTIMATION
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold">
+            Construction & Built-Up Area Cost Estimator
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed font-light mt-2">
+            Calculate instant structural, facade, and turnkey execution budgets calibrated to current Indian steel, concrete, and MEP index rates.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 bg-[#0F172A]/90 backdrop-blur-md border border-slate-700 p-8 rounded-3xl space-y-6 shadow-2xl">
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-3 font-semibold">1. Select Project Category</label>
+              <div class="grid grid-cols-3 gap-3">
+                <button id="homeBtnRes" class="py-3 px-4 rounded-xl text-xs font-bold border bg-[#0369A1] text-white border-[#0369A1]">Residential</button>
+                <button id="homeBtnCom" class="py-3 px-4 rounded-xl text-xs font-bold border bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-500">Commercial</button>
+                <button id="homeBtnInf" class="py-3 px-4 rounded-xl text-xs font-bold border bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-500">Infrastructure</button>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label class="text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold">2. Built-Up Area (Sq. Ft.)</label>
+                <span id="homeAreaVal" class="text-lg font-mono font-bold text-sky-400">5,000 Sq. Ft.</span>
+              </div>
+              <input type="range" id="homeAreaSlider" min="1000" max="50000" step="500" value="5000" class="w-full h-2.5 bg-slate-700 rounded-lg accent-[#0369A1]">
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 bg-gradient-to-br from-slate-900/95 to-[#0F172A]/95 backdrop-blur-md border border-slate-700 p-8 rounded-3xl space-y-6 shadow-2xl">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-widest text-[#0369A1] block mb-1 font-bold">PROJECTED TURNKEY BUDGET</span>
+              <div id="homeCostResult" class="font-syne text-3xl sm:text-4xl font-extrabold text-white">
+                INR 1.89 Cr - 2.17 Cr
+              </div>
+            </div>
+
+            <div class="space-y-2 text-xs font-mono text-slate-300 pt-2 border-t border-slate-800">
+              <div class="flex items-center text-emerald-400">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 mr-2"></i> Quality Assurance Stage Gate Audits
+              </div>
+              <div class="flex items-center text-emerald-400">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 mr-2"></i> Guaranteed Handover Timeline
+              </div>
+            </div>
+
+            <a href="/contact" class="w-full py-4 bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all block text-center shadow-lg">
+              Contact Now — Request BOQ & Site Inspection
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. QUALITY STANDARDS & ACCREDITATIONS -->
+    <section class="py-20 sm:py-24 px-4 sm:px-8 text-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+          <span class="text-[#0369A1] text-xs font-mono uppercase font-bold tracking-widest block">COMPLIANCE & STANDARDS</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Quality Management & Engineering Standards</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-8 rounded-3xl bg-[#0F172A]/85 backdrop-blur-md border border-slate-700 text-center space-y-4 shadow-xl hover:border-[#0369A1] transition-all">
+            <i data-lucide="award" class="w-10 h-10 mx-auto text-[#0369A1]"></i>
+            <h3 class="font-serif text-xl font-bold text-white">ISO 9001:2015</h3>
+            <p class="text-xs text-slate-300 leading-relaxed font-normal">Certified Quality Management System guaranteeing raw material testing, structural engineering safety, and zero-defect compliance.</p>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-[#0F172A]/85 backdrop-blur-md border border-slate-700 text-center space-y-4 shadow-xl hover:border-[#0369A1] transition-all">
+            <i data-lucide="trees" class="w-10 h-10 mx-auto text-[#0369A1]"></i>
+            <h3 class="font-serif text-xl font-bold text-white">Sustainable Engineering</h3>
+            <p class="text-xs text-slate-300 leading-relaxed font-normal">Integration of low-carbon fly ash concrete mixes, energy-efficient building orientation, and zero water waste practices.</p>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-[#0F172A]/85 backdrop-blur-md border border-slate-700 text-center space-y-4 shadow-xl hover:border-[#0369A1] transition-all">
+            <i data-lucide="shield-check" class="w-10 h-10 mx-auto text-[#0369A1]"></i>
+            <h3 class="font-serif text-xl font-bold text-white">Statutory Compliance</h3>
+            <p class="text-xs text-slate-300 leading-relaxed font-normal">Adherence to National Building Code (NBC 2016), local municipal regulations, transparent contracts, and verified stage handovers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FINAL PAGE CALL TO ACTION -->
+    <section class="py-20 px-4 sm:px-8 text-center text-white border-t border-slate-800/80">
+      <div class="max-w-4xl mx-auto space-y-6">
+        <span class="text-[#0369A1] text-xs font-mono uppercase font-bold tracking-widest block">START YOUR PROJECT</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold">Ready to Build With Engineering Precision?</h2>
+        <p class="text-slate-300 text-sm max-w-xl mx-auto font-light">
+          Connect with our technical team to discuss project requirements, RFP bids, and site inspection schedules.
+        </p>
+        <div class="pt-2">
+          <a href="/contact" class="px-8 py-4 bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-xl inline-flex items-center">
+            Contact Now <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+
+  <!-- GSAP SCROLLTRIGGER CANVAS BACKGROUND ENGINE -->
+  <script>
+    import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const canvas = document.getElementById('scrollCanvas') as HTMLCanvasElement;
+    const ctx = canvas?.getContext('2d');
+    const progressBar = document.getElementById('scrollProgressBar');
+
+    const startFrameNum = 120;
+    const endFrameNum = 200;
+    const totalFrames = endFrameNum - startFrameNum + 1; // 81 frames
+
+    const currentFrame = (frameNum: number) => 
+      `/frames-v1/frame_${String(frameNum).padStart(4, '0')}.jpg`;
+
+    const images: HTMLImageElement[] = [];
+    const sequenceState = { frame: 0 }; // 0 corresponds to frame 120
+
+    // Preload available frames (120 to 200)
+    for (let i = startFrameNum; i <= endFrameNum; i++) {
+      const img = new Image();
+      img.src = currentFrame(i);
+      images.push(img);
+    }
+
+    function resizeCanvas() {
+      if (!canvas || !ctx) return;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      render();
+    }
+
+    function render() {
+      if (!canvas || !ctx || !images[sequenceState.frame]) return;
+      const img = images[sequenceState.frame];
+      if (!img.complete) return;
+
+      const canvasRatio = canvas.width / canvas.height;
+      const imgRatio = (img.width || 1280) / (img.height || 720);
+      let drawWidth = canvas.width;
+      let drawHeight = canvas.height;
+      let offsetX = 0;
+      let offsetY = 0;
+
+      if (canvasRatio > imgRatio) {
+        drawHeight = canvas.width / imgRatio;
+        offsetY = (canvas.height - drawHeight) / 2;
+      } else {
+        drawWidth = canvas.height * imgRatio;
+        offsetX = (canvas.width - drawWidth) / 2;
+      }
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    if (images[0]) {
+      images[0].onload = resizeCanvas;
+    }
+    resizeCanvas();
+
+    // Sync canvas frames across the entire page scroll (frame 120 at top -> frame 200 at bottom)
+    ScrollTrigger.create({
+      trigger: '#pageContainer',
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 0.5,
+      onUpdate: (self) => {
+        const frameIndex = Math.min(
+          totalFrames - 1,
+          Math.floor(self.progress * totalFrames)
+        );
+        sequenceState.frame = frameIndex;
+        render();
+
+        // Update progress bar width
+        if (progressBar) {
+          progressBar.style.width = `${(self.progress * 100).toFixed(1)}%`;
+        }
+      }
+    });
+
+    // Interactive BOQ Calculator Script
+    let baseRate = 2800;
+    const slider = document.getElementById('homeAreaSlider');
+    const areaVal = document.getElementById('homeAreaVal');
+    const costResult = document.getElementById('homeCostResult');
+
+    function calculate() {
+      if (!slider || !areaVal || !costResult) return;
+      const area = parseInt((slider as HTMLInputElement).value);
+      areaVal.innerText = area.toLocaleString() + ' Sq. Ft.';
+      const minCr = ((area * baseRate * 1.35) / 10000000).toFixed(2);
+      const maxCr = ((area * baseRate * 1.55) / 10000000).toFixed(2);
+      costResult.innerText = 'INR ' + minCr + ' Cr - ' + maxCr + ' Cr';
+    }
+
+    slider?.addEventListener('input', calculate);
+
+    document.getElementById('homeBtnRes')?.addEventListener('click', (e) => {
+      baseRate = 2800;
+      updateActiveBtn(e.currentTarget as HTMLElement);
+      calculate();
+    });
+    document.getElementById('homeBtnCom')?.addEventListener('click', (e) => {
+      baseRate = 3400;
+      updateActiveBtn(e.currentTarget as HTMLElement);
+      calculate();
+    });
+    document.getElementById('homeBtnInf')?.addEventListener('click', (e) => {
+      baseRate = 4200;
+      updateActiveBtn(e.currentTarget as HTMLElement);
+      calculate();
+    });
+
+    function updateActiveBtn(target: HTMLElement) {
+      ['homeBtnRes', 'homeBtnCom', 'homeBtnInf'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) {
+          btn.className = 'py-3 px-4 rounded-xl text-xs font-bold border bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-500';
+        }
+      });
+      target.className = 'py-3 px-4 rounded-xl text-xs font-bold border bg-[#0369A1] text-white border-[#0369A1]';
+    }
+  </script>
+</Layout>

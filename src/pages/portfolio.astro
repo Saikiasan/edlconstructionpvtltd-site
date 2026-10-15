@@ -1,0 +1,223 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Engineering Expertise & Project Solutions | EDL Construction Pvt Ltd">
+  <Header activePage="portfolio" />
+
+  <!-- Hero Banner -->
+  <section class="bg-[#0F172A] text-white py-24 px-4 sm:px-8 border-b border-slate-800 relative overflow-hidden">
+    <div class="absolute inset-0 blueprint-grid-dark opacity-25 pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto text-center space-y-4">
+      <span class="text-[#0369A1] bg-sky-950/70 border border-[#0369A1]/40 px-3 py-1 rounded-full text-xs font-mono uppercase font-bold tracking-widest inline-block">
+        ENGINEERING & PROJECT PORTFOLIO
+      </span>
+      <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white">
+        Project Execution & Delivery Capabilities
+      </h1>
+      <p class="text-slate-300 text-sm max-w-2xl mx-auto font-light leading-relaxed">
+        EDL Construction Pvt Ltd delivers turnkey engineering, procurement, and construction (EPC) solutions across residential developments, commercial centers, and heavy civil infrastructure.
+      </p>
+    </div>
+  </section>
+
+  <!-- Notice Banner: Real-time Authenticity -->
+  <section class="py-6 bg-[#F1F5F9] border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#0F172A]">
+      <div class="flex items-center space-x-2">
+        <i data-lucide="shield-check" class="w-4 h-4 text-[#0369A1]"></i>
+        <span><strong>Verified Execution Standards:</strong> All site operations adhere strictly to ISO 9001:2015, NBC 2016, and state statutory building codes.</span>
+      </div>
+      <a href="/contact" class="text-[#EA580C] hover:underline font-bold inline-flex items-center">
+        Request Corporate Credentials <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Core Execution Capabilities Matrix -->
+  <section class="py-20 px-4 sm:px-8 max-w-7xl mx-auto space-y-16">
+    <div class="text-center max-w-3xl mx-auto space-y-3">
+      <span class="text-[#0369A1] text-xs font-mono uppercase font-bold tracking-widest block">EPC SECTORS</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#0F172A]">Core Construction Verticals</h2>
+      <p class="text-slate-600 text-sm font-light">
+        Our specialized project divisions handle complex structural demands with precision management and on-time milestone delivery.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Sector 1: Residential & Mixed-Use Structural Civil -->
+      <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+        <div class="p-8 space-y-5">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded bg-[#0369A1]/10 text-[#0369A1] font-mono text-xs font-bold border border-[#0369A1]/20">
+              SECTOR 01
+            </span>
+            <span class="text-xs font-mono text-slate-400">TURNKEY CIVIL</span>
+          </div>
+
+          <h3 class="font-serif text-2xl font-bold text-[#0F172A] group-hover:text-[#0369A1] transition-colors">
+            Residential & High-Rise Civil Works
+          </h3>
+
+          <p class="text-slate-600 text-sm leading-relaxed font-normal">
+            Turnkey superstructure casting, advanced raft and pile foundations, post-tensioned floor slabs, and premium architectural finishing for modern residential structures.
+          </p>
+
+          <div class="p-4 rounded-xl bg-[#F1F5F9] border border-slate-200 grid grid-cols-2 gap-3 text-xs font-mono text-slate-700">
+            <div><span class="text-slate-400 block">FOUNDATION:</span> <strong>Bored Cast-In-Situ Piling</strong></div>
+            <div><span class="text-slate-400 block">CONCRETE GRADE:</span> <strong>M40 - M70 Ready-Mix</strong></div>
+            <div><span class="text-slate-400 block">STEEL SPEC:</span> <strong>Fe 550D TMT Rebar</strong></div>
+            <div><span class="text-slate-400 block">COMPLIANCE:</span> <strong>IS 456:2000 & NBC 2016</strong></div>
+          </div>
+        </div>
+
+        <div class="p-8 pt-0">
+          <a href="/contact" class="w-full py-3.5 bg-[#0F172A] hover:bg-[#0369A1] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all block text-center shadow-xs">
+            Consult on Residential Civil Works
+          </a>
+        </div>
+      </div>
+
+      <!-- Sector 2: Commercial & Industrial Complexes -->
+      <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+        <div class="p-8 space-y-5">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded bg-[#0369A1]/10 text-[#0369A1] font-mono text-xs font-bold border border-[#0369A1]/20">
+              SECTOR 02
+            </span>
+            <span class="text-xs font-mono text-slate-400">COMMERCIAL & RETAIL</span>
+          </div>
+
+          <h3 class="font-serif text-2xl font-bold text-[#0F172A] group-hover:text-[#0369A1] transition-colors">
+            Commercial Towers & Business Complexes
+          </h3>
+
+          <p class="text-slate-600 text-sm leading-relaxed font-normal">
+            Large-span column-free floor layouts, integrated unitized facade installations, central HVAC coordination, and advanced electrical substation commissioning.
+          </p>
+
+          <div class="p-4 rounded-xl bg-[#F1F5F9] border border-slate-200 grid grid-cols-2 gap-3 text-xs font-mono text-slate-700">
+            <div><span class="text-slate-400 block">FACADES:</span> <strong>High Acoustic DGU Glazing</strong></div>
+            <div><span class="text-slate-400 block">MEP SYSTEMS:</span> <strong>Automated BMS Integration</strong></div>
+            <div><span class="text-slate-400 block">FIRE SAFETY:</span> <strong>NFPA & NBC Compliant</strong></div>
+            <div><span class="text-slate-400 block">ENERGY:</span> <strong>Green Building Standard</strong></div>
+          </div>
+        </div>
+
+        <div class="p-8 pt-0">
+          <a href="/contact" class="w-full py-3.5 bg-[#0F172A] hover:bg-[#0369A1] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all block text-center shadow-xs">
+            Inquire Commercial EPC Solutions
+          </a>
+        </div>
+      </div>
+
+      <!-- Sector 3: Heavy Infrastructure, Roads & Bridges -->
+      <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+        <div class="p-8 space-y-5">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded bg-[#0369A1]/10 text-[#0369A1] font-mono text-xs font-bold border border-[#0369A1]/20">
+              SECTOR 03
+            </span>
+            <span class="text-xs font-mono text-slate-400">HEAVY INFRASTRUCTURE</span>
+          </div>
+
+          <h3 class="font-serif text-2xl font-bold text-[#0F172A] group-hover:text-[#0369A1] transition-colors">
+            Heavy Civil, Highways & Bridge Works
+          </h3>
+
+          <p class="text-slate-600 text-sm leading-relaxed font-normal">
+            Execution capabilities for heavy transport corridors, reinforced concrete flyovers, deep underwater pier foundations, and slipform concrete highway paving.
+          </p>
+
+          <div class="p-4 rounded-xl bg-[#F1F5F9] border border-slate-200 grid grid-cols-2 gap-3 text-xs font-mono text-slate-700">
+            <div><span class="text-slate-400 block">STANDARDS:</span> <strong>MoRTH & IRC Guidelines</strong></div>
+            <div><span class="text-slate-400 block">FOUNDATION:</span> <strong>Deep Well Caissons & Piles</strong></div>
+            <div><span class="text-slate-400 block">TESTING:</span> <strong>NABL Ultrasonic & Core Tests</strong></div>
+            <div><span class="text-slate-400 block">SEISMIC:</span> <strong>Zone IV / V Dampeners</strong></div>
+          </div>
+        </div>
+
+        <div class="p-8 pt-0">
+          <a href="/contact" class="w-full py-3.5 bg-[#0F172A] hover:bg-[#0369A1] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all block text-center shadow-xs">
+            Discuss Heavy Infrastructure Projects
+          </a>
+        </div>
+      </div>
+
+      <!-- Sector 4: Industrial Warehousing & Green Tech -->
+      <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+        <div class="p-8 space-y-5">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded bg-[#0369A1]/10 text-[#0369A1] font-mono text-xs font-bold border border-[#0369A1]/20">
+              SECTOR 04
+            </span>
+            <span class="text-xs font-mono text-slate-400">INDUSTRIAL & GREEN TECH</span>
+          </div>
+
+          <h3 class="font-serif text-2xl font-bold text-[#0F172A] group-hover:text-[#0369A1] transition-colors">
+            Industrial Logistics & Sustainable Complexes
+          </h3>
+
+          <p class="text-slate-600 text-sm leading-relaxed font-normal">
+            Pre-Engineered Building (PEB) industrial sheds, heavy machinery flooring with laser screed finishes, solar microgrid setups, and zero-discharge drainage.
+          </p>
+
+          <div class="p-4 rounded-xl bg-[#F1F5F9] border border-slate-200 grid grid-cols-2 gap-3 text-xs font-mono text-slate-700">
+            <div><span class="text-slate-400 block">FLOORING:</span> <strong>FM2 Laser Screed Floor</strong></div>
+            <div><span class="text-slate-400 block">STRUCTURE:</span> <strong>High-Tensile PEB Steel</strong></div>
+            <div><span class="text-slate-400 block">SUSTAINABILITY:</span> <strong>Solar & Water Recycling</strong></div>
+            <div><span class="text-slate-400 block">DRAINAGE:</span> <strong>ZLD Rainwater Harvesting</strong></div>
+          </div>
+        </div>
+
+        <div class="p-8 pt-0">
+          <a href="/contact" class="w-full py-3.5 bg-[#0F172A] hover:bg-[#0369A1] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all block text-center shadow-xs">
+            Explore Industrial EPC Solutions
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Quality Assurance & Standards Strip -->
+  <section class="py-16 bg-[#F1F5F9] border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center space-y-8">
+      <div>
+        <span class="text-[#0369A1] text-xs font-mono uppercase font-bold tracking-widest block mb-2">ZERO-COMPROMISE ASSURANCE</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#0F172A]">Strict QA/QC Stage-Gate Surveillance</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
+          <div class="h-10 w-10 rounded-lg bg-[#0369A1]/10 text-[#0369A1] flex items-center justify-center font-bold font-mono">01</div>
+          <h4 class="font-bold text-sm text-[#0F172A]">Material Batch Certification</h4>
+          <p class="text-xs text-slate-500 font-light">Every truckload of cement, aggregate, and TMT rebar is tested in NABL-certified laboratories before use.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
+          <div class="h-10 w-10 rounded-lg bg-[#0369A1]/10 text-[#0369A1] flex items-center justify-center font-bold font-mono">02</div>
+          <h4 class="font-bold text-sm text-[#0F172A]">Non-Destructive Testing (NDT)</h4>
+          <p class="text-xs text-slate-500 font-light">Ultrasonic pulse velocity and rebound hammer testing for all post-cured structural concrete members.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
+          <div class="h-10 w-10 rounded-lg bg-[#0369A1]/10 text-[#0369A1] flex items-center justify-center font-bold font-mono">03</div>
+          <h4 class="font-bold text-sm text-[#0F172A]">Milestone Handover Clearance</h4>
+          <p class="text-xs text-slate-500 font-light">Statutory stage-gate audits ensure full compliance with municipal, fire safety, and engineering specifications.</p>
+        </div>
+      </div>
+
+      <div class="pt-4">
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md">
+          Request Project Consultation & RFP Submission <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

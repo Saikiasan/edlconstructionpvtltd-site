@@ -1,0 +1,119 @@
+---
+interface Props {
+  title: string;
+  category: string;
+  authority: string;
+  location: string;
+  status: string;
+  progress: number;
+  value: string;
+  lengthOrArea: string;
+  specs: string[];
+  codeCompliance: string;
+  image?: string;
+}
+
+const {
+  title,
+  category,
+  authority,
+  location,
+  status,
+  progress,
+  value,
+  lengthOrArea,
+  specs,
+  codeCompliance,
+  image = "/frames/frame_0001.png"
+} = Astro.props;
+---
+
+<div class="bg-white border border-slate-200 hover:border-slate-300 rounded-2xl overflow-hidden transition-all duration-300 group shadow-xs hover:shadow-md flex flex-col h-full">
+  
+  <!-- Image Banner with Overlay Status -->
+  <div class="relative h-52 w-full overflow-hidden bg-slate-100">
+    <img 
+      src={image} 
+      alt={title} 
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-slate-900/30"></div>
+    
+    <!-- Top Tags -->
+    <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between">
+      <span class="bg-white/95 text-blue-950 text-[11px] font-mono font-bold px-2.5 py-1 rounded-md border border-slate-200 shadow-xs">
+        {category}
+      </span>
+      <span class="bg-slate-900/80 text-white text-[11px] font-mono px-2.5 py-1 rounded-md border border-slate-700 backdrop-blur-xs flex items-center shadow-xs">
+        <i data-lucide="map-pin" class="w-3 h-3 mr-1 text-amber-400"></i>
+        {location}
+      </span>
+    </div>
+
+    <!-- Bottom Authority Strip inside image -->
+    <div class="absolute bottom-3 left-3.5 right-3.5">
+      <span class="text-xs font-mono text-white font-medium flex items-center drop-shadow">
+        <i data-lucide="building-2" class="w-3.5 h-3.5 mr-1.5 text-amber-400"></i>
+        {authority}
+      </span>
+    </div>
+  </div>
+
+  <!-- Card Body -->
+  <div class="p-6 flex-1 flex flex-col justify-between">
+    <div>
+      <h3 class="text-slate-900 font-syne font-bold text-lg leading-snug mb-3 group-hover:text-blue-900 transition-colors">
+        {title}
+      </h3>
+
+      <!-- Metric Grid -->
+      <div class="grid grid-cols-2 gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-mono mb-4">
+        <div>
+          <span class="text-slate-500 block text-[10px] uppercase font-sans font-semibold">Scale:</span>
+          <strong class="text-slate-800">{lengthOrArea}</strong>
+        </div>
+        <div>
+          <span class="text-slate-500 block text-[10px] uppercase font-sans font-semibold">Contract:</span>
+          <strong class="text-amber-800 font-bold">{value}</strong>
+        </div>
+      </div>
+
+      <!-- Engineering Highlights List -->
+      <div class="space-y-1.5 mb-4">
+        <span class="text-[11px] font-mono uppercase text-slate-500 font-bold block">Key Specifications:</span>
+        <ul class="space-y-1.5 text-xs text-slate-600">
+          {specs.map(spec => (
+            <li class="flex items-start">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 mr-1.5 mt-0.5 flex-shrink-0"></i>
+              <span>{spec}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Progress & Compliance Footer -->
+    <div class="pt-4 border-t border-slate-100 space-y-3">
+      <!-- Progress Bar -->
+      <div>
+        <div class="flex items-center justify-between text-xs font-mono mb-1">
+          <span class="text-slate-500">Physical Milestone:</span>
+          <span class="text-emerald-700 font-bold">{progress}% Complete</span>
+        </div>
+        <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden border border-slate-200">
+          <div class="bg-gradient-to-r from-amber-600 to-emerald-600 h-2 rounded-full transition-all duration-500" style={`width: ${progress}%`}></div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-[11px] font-mono text-slate-500">
+        <span class="flex items-center text-slate-600">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-600 mr-1"></i>
+          {codeCompliance}
+        </span>
+        <span class="text-amber-800 font-bold">{status}</span>
+      </div>
+    </div>
+
+  </div>
+</div>

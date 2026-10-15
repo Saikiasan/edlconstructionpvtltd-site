@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Corporate Identity & Engineering Standards | EDL Construction Pvt Ltd">
+  <Header activePage="about" />
+
+  <section class="bg-[#0F172A] text-white py-24 px-4 sm:px-8 border-b border-slate-800 relative overflow-hidden">
+    <div class="absolute inset-0 blueprint-grid-dark opacity-25 pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto text-center space-y-4">
+      <span class="text-[#0369A1] bg-sky-950/70 border border-[#0369A1]/40 px-3 py-1 rounded-full text-xs font-mono uppercase font-bold tracking-widest inline-block">
+        CORPORATE IDENTITY & VALUES
+      </span>
+      <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white">Engineering Precision & Trust</h1>
+      <p class="text-slate-300 text-sm max-w-2xl mx-auto font-light leading-relaxed">
+        EDL Construction Pvt Ltd combines structural civil engineering discipline with statutory compliance and milestone transparency across commercial, residential, and infrastructure sectors.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4-Stage Methodology -->
+  <section class="py-20 px-4 sm:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+      <span class="text-[#0369A1] text-xs font-mono uppercase font-bold tracking-widest block">METHODOLOGY</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#0F172A]">From Blueprint to Commissioning</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3 hover:shadow-md transition-shadow">
+        <span class="font-mono text-2xl font-bold text-[#0369A1]">01</span>
+        <h3 class="font-serif text-lg font-bold text-[#0F172A]">CAD & Structural Design</h3>
+        <p class="text-xs text-slate-500 leading-relaxed font-light">Architectural blueprint coordination, structural load calculations, and BIM clash detection.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3 hover:shadow-md transition-shadow">
+        <span class="font-mono text-2xl font-bold text-[#0369A1]">02</span>
+        <h3 class="font-serif text-lg font-bold text-[#0F172A]">Certified Material Procurement</h3>
+        <p class="text-xs text-slate-500 leading-relaxed font-light">Direct procurement of Fe 550D TMT reinforcement and certified ready-mix concrete.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3 hover:shadow-md transition-shadow">
+        <span class="font-mono text-2xl font-bold text-[#0369A1]">03</span>
+        <h3 class="font-serif text-lg font-bold text-[#0F172A]">Stage-Gate Surveillance</h3>
+        <p class="text-xs text-slate-500 leading-relaxed font-light">Stage-wise inspection checkpoints, cube compression testing, and non-destructive audits.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3 hover:shadow-md transition-shadow">
+        <span class="font-mono text-2xl font-bold text-[#0369A1]">04</span>
+        <h3 class="font-serif text-lg font-bold text-[#0F172A]">Turnkey Handover</h3>
+        <p class="text-xs text-slate-500 leading-relaxed font-light">Statutory completion documentation, fire NOC clearances, and comprehensive handovers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standards & Compliance -->
+  <section class="py-20 px-4 sm:px-8 bg-[#F1F5F9] border-t border-slate-200">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="p-8 rounded-2xl bg-white border border-slate-200 text-center space-y-4 shadow-sm">
+        <i data-lucide="award" class="w-10 h-10 mx-auto text-[#0369A1]"></i>
+        <h3 class="font-serif text-xl font-bold text-[#0F172A]">ISO 9001:2015</h3>
+        <p class="text-xs text-slate-500 leading-relaxed font-light">Quality Management System guaranteeing raw material testing, structural safety, and defect compliance.</p>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-white border border-slate-200 text-center space-y-4 shadow-sm">
+        <i data-lucide="trees" class="w-10 h-10 mx-auto text-[#0369A1]"></i>
+        <h3 class="font-serif text-xl font-bold text-[#0F172A]">Sustainable Construction</h3>
+        <p class="text-xs text-slate-500 leading-relaxed font-light">Adoption of low-carbon fly ash concrete mixes, solar installations, and zero-runoff drainage.</p>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-white border border-slate-200 text-center space-y-4 shadow-sm">
+        <i data-lucide="shield-check" class="w-10 h-10 mx-auto text-[#0369A1]"></i>
+        <h3 class="font-serif text-xl font-bold text-[#0F172A]">Statutory Compliance</h3>
+        <p class="text-xs text-slate-500 leading-relaxed font-light">Transparency with verified structural certificates, safety protocols, and milestone-linked handovers.</p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

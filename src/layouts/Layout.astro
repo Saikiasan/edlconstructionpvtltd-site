@@ -1,0 +1,138 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    
+    <link rel="icon" type="image/jpeg" href="/favicon.jpeg" />
+    <link rel="shortcut icon" href="/favicon.jpeg" />
+    <link rel="apple-touch-icon" href="/favicon.jpeg" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style is:global>
+      :root {
+        --color-primary: #0F172A; /* Structural Navy */
+        --color-secondary: #0369A1; /* Blueprint Teal */
+        --color-accent: #EA580C; /* Safety Orange */
+        --color-neutral-surface: #F1F5F9; /* Light Platinum */
+        --color-text-dark: #020617; /* Iron Black */
+        --color-gold: #0369A1;
+        --color-gold-bright: #0284C7;
+        --color-slate-dark: #0F172A;
+      }
+
+      body {
+        background-color: #FFFFFF;
+        color: #020617;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        overflow-x: hidden;
+      }
+
+      .accent-glow {
+        box-shadow: 0 10px 30px -10px rgba(234, 88, 12, 0.45);
+      }
+      .accent-glow-lg {
+        box-shadow: 0 20px 50px -10px rgba(234, 88, 12, 0.6);
+      }
+      .teal-glow {
+        box-shadow: 0 10px 30px -10px rgba(3, 105, 161, 0.45);
+      }
+      .gold-glow {
+        box-shadow: 0 10px 25px -10px rgba(234, 88, 12, 0.35);
+      }
+      .gold-glow-lg {
+        box-shadow: 0 20px 40px -10px rgba(234, 88, 12, 0.45);
+      }
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .glass-card-dark {
+        background: rgba(11, 15, 25, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(197, 160, 89, 0.25);
+      }
+
+      .perspective-1200 {
+        perspective: 1200px;
+        perspective-origin: center center;
+      }
+      .transform-style-3d {
+        transform-style: preserve-3d;
+      }
+
+      .blueprint-grid-dark {
+        background-color: #07101E;
+        background-image: 
+          linear-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+          linear-gradient(rgba(197, 160, 89, 0.15) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(197, 160, 89, 0.15) 1px, transparent 1px);
+        background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+      }
+
+      .parallax-bg {
+        will-change: transform;
+        transition: transform 0.1s cubic-bezier(0,0,0.2,1);
+      }
+
+      img[loading="lazy"] {
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+      }
+      img[loading="lazy"].loaded, img:not([loading="lazy"]) {
+        opacity: 1;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0F172A;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #0369A1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0284C7;
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden selection:bg-[#EA580C] selection:text-white bg-white text-[#020617]">
+    <slot />
+    
+    <script is:inline>
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const lazyImgs = document.querySelectorAll('img[loading="lazy"]');
+        lazyImgs.forEach(img => {
+          if (img.complete) {
+            img.classList.add('loaded');
+          } else {
+            img.addEventListener('load', () => img.classList.add('loaded'));
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+---
+const empanelments = [
+  {
+    authority: "CPWD / MoRTH",
+    category: "Class-1 (Super Special Category)",
+    scope: "Unlimited Tendering Limit for Highways, Elevated Corridors & Institutional Structures",
+    badge: "National High-Grade",
+    icon: "landmark",
+    color: "amber"
+  },
+  {
+    authority: "National Highways Authority of India (NHAI)",
+    category: "Pre-Qualified EPC Partner",
+    scope: "Expressways, Cable-Stayed / Extradosed River Bridges, Tunnels & Grade Separators",
+    badge: "EPC Qualified",
+    icon: "route",
+    color: "blue"
+  },
+  {
+    authority: "Indian Railways / Metro Rail",
+    category: "Class-A Rail Infrastructure",
+    scope: "Elevated Viaducts, Rail Flyovers, U-Girder Launching, Ballastless Track Support",
+    badge: "Transit Approved",
+    icon: "train",
+    color: "emerald"
+  },
+  {
+    authority: "Government e-Marketplace (GeM)",
+    category: "Verified Tier-1 Seller",
+    scope: "Turnkey EPC Services, Modular Smart City Infrastructure & Civil Procurement",
+    badge: "GeM ID: GEM-EDL-2026",
+    icon: "shopping-bag",
+    color: "indigo"
+  },
+  {
+    authority: "Central Vigilance Commission (CVC)",
+    category: "Integrity Pact Signatory",
+    scope: "100% Transparent Financial Accounting, E-Procurement Bidding & Anti-Corruption Protocol",
+    badge: "CVC Compliant",
+    icon: "shield-check",
+    color: "cyan"
+  },
+  {
+    authority: "NABL Accredited Testing",
+    category: "ISO/IEC 17025 Quality Regime",
+    scope: "In-House & Independent Destructive/Non-Destructive Concrete & Steel Core Analysis",
+    badge: "Lab Validated",
+    icon: "test-tube",
+    color: "rose"
+  }
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+  {empanelments.map((item) => (
+    <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-xs hover:border-amber-400 hover:shadow-md transition-all group relative overflow-hidden">
+      <div class="flex items-start justify-between mb-4">
+        <div class="h-11 w-11 rounded-lg bg-amber-50/80 border border-amber-200/80 flex items-center justify-center text-amber-700 group-hover:scale-105 transition-all">
+          <i data-lucide={item.icon} class="w-5 h-5"></i>
+        </div>
+        <span class="text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
+          {item.badge}
+        </span>
+      </div>
+
+      <h4 class="text-slate-900 font-syne font-bold text-base mb-1 tracking-tight group-hover:text-blue-900 transition-colors">
+        {item.authority}
+      </h4>
+      <p class="text-xs font-mono text-amber-800 font-semibold mb-2.5">
+        {item.category}
+      </p>
+      <p class="text-xs text-slate-600 leading-relaxed">
+        {item.scope}
+      </p>
+
+      <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px]">
+        <span class="flex items-center text-emerald-700 font-medium">
+          <i data-lucide="check-circle" class="w-3.5 h-3.5 mr-1 text-emerald-600"></i> Active Empanelment
+        </span>
+        <span class="font-mono text-slate-500">Valid: 2026–2031</span>
+      </div>
+    </div>
+  ))}
+</div>

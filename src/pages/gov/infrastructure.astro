@@ -1,0 +1,274 @@
+---
+import GovLayout from '../../layouts/GovLayout.astro';
+import GovProjectCard from '../../components/gov/GovProjectCard.astro';
+
+const projects = [
+  {
+    title: "Brahmaputra Marine Expressway Bridge",
+    category: "Bridges & Marine",
+    categoryKey: "bridges",
+    authority: "Ministry of Road Transport & Highways (MoRTH)",
+    location: "Assam / North-East Corridor",
+    status: "Active Execution — 78%",
+    progress: 78,
+    value: "₹ 2,120.00 Cr",
+    lengthOrArea: "6.4 Km Span across River Brahmaputra",
+    specs: [
+      "M70 Self-Compacting Underwater Concrete Mix",
+      "Seismic Zone V Base Isolation Dampeners",
+      "45m Deep Well Foundation Caissons",
+      "High-Tension Stay Cables with Galvanized Wax Sheathing"
+    ],
+    codeCompliance: "IRC:112 & IRC:SP:69"
+  },
+  {
+    title: "Western Access-Controlled Greenfield Highway (Pkg IV)",
+    category: "Highways & Expressways",
+    categoryKey: "highways",
+    authority: "National Highways Authority of India (NHAI)",
+    location: "Western Industrial Corridor",
+    status: "Completed & Commissioned",
+    progress: 100,
+    value: "₹ 1,480.00 Cr",
+    lengthOrArea: "48.5 Km (6-Lane Dual PQC)",
+    specs: [
+      "Wirtgen SP 1600 Automatic Slipform Concrete Paver",
+      "Automated Weigh-In-Motion (WIM) Telemetry",
+      "350mm Pavement Quality Concrete (PQC)",
+      "Continuous Sub-Surface Geotextile Drainage Layer"
+    ],
+    codeCompliance: "IRC:SP:84-2019"
+  },
+  {
+    title: "Metropolitan Elevated Metro Line Viaduct & 8 Stations",
+    category: "Metro & Rail Transit",
+    categoryKey: "transit",
+    authority: "Mumbai Metro Rail Corporation (MMRC)",
+    location: "Mumbai Metropolitan Region",
+    status: "Active Execution — 64%",
+    progress: 64,
+    value: "₹ 945.50 Cr",
+    lengthOrArea: "9.6 Km Viaduct + 8 Elevated Stations",
+    specs: [
+      "Precast Segmental U-Girder Construction",
+      "120-Tonne Self-Propelled Launching Gantries",
+      "Ballastless Plinth Track Concrete Bed",
+      "Integrated Multimodal Commuter Transfer Hubs"
+    ],
+    codeCompliance: "RDSO / IRS Concrete Bridge Code"
+  },
+  {
+    title: "Integrated State Secretariat & High Court Annexure",
+    category: "Institutional Complexes",
+    categoryKey: "institutional",
+    authority: "Central Public Works Department (CPWD)",
+    location: "Capital Administrative Zone",
+    status: "Final Finishing Stage — 92%",
+    progress: 92,
+    value: "₹ 620.00 Cr",
+    lengthOrArea: "1,250,000 Sq. Ft. Built-up Area",
+    specs: [
+      "GRIHA 5-Star Net-Zero Carbon Certified Architecture",
+      "Post-Tensioned 18m Column-Free Auditorium & Courtrooms",
+      "Central SCADA-controlled HVAC with Dual-Filtration",
+      "1.2 MW Rooftop BIPV Solar Power Array"
+    ],
+    codeCompliance: "CPWD Specifications & NBC 2016"
+  },
+  {
+    title: "Municipal 24x7 Clean Water & ZLD Treatment Network",
+    category: "Smart Water & Utilities",
+    categoryKey: "water",
+    authority: "Smart Cities Mission / Municipal Corporation",
+    location: "Smart City Zone 1",
+    status: "Testing & Commissioning — 88%",
+    progress: 88,
+    value: "₹ 385.00 Cr",
+    lengthOrArea: "150 MLD Water Supply + 60 MLD ZLD STP",
+    specs: [
+      "Ductile Iron (DI) K9 Transmission Main Pipeline (112 Km)",
+      "Sequential Batch Reactor (SBR) Biological Treatment",
+      "Real-Time Ultrasonic Flow Meters & IoT Pressure Transducers",
+      "100% Recycled Water Reuse for Industrial Flushing"
+    ],
+    codeCompliance: "CPHEEO Manual on Water Supply"
+  },
+  {
+    title: "Border Strategic All-Weather Logistics Highway",
+    category: "Strategic & Defense Works",
+    categoryKey: "strategic",
+    authority: "Border Roads Organisation (BRO)",
+    location: "Northern Himalayan Front",
+    status: "Under Construction — 52%",
+    progress: 52,
+    value: "₹ 810.00 Cr",
+    lengthOrArea: "38.5 Km High-Altitude Heavy Load Road",
+    specs: [
+      "Precast Reinforced Concrete Avalanche Snow-Sheds",
+      "Sub-Zero Rapid Curing Polymer-Modified Bitumen",
+      "Bio-Engineering Slope Stabilization & Rock-Bolting",
+      "Class-70 Military Vehicle Load Rated Bridges"
+    ],
+    codeCompliance: "BRO / IRC Special Publication 48"
+  }
+];
+---
+
+<GovLayout title="Public Infrastructure & EPC Portfolio" activeGovPage="infrastructure">
+  
+  <!-- Sub-page Header (Light Theme) -->
+  <section class="bg-white py-14 sm:py-20 border-b border-slate-200 gov-pattern-grid-light relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+      <div class="max-w-3xl space-y-4">
+        <div class="inline-flex items-center space-x-2 bg-amber-50 border border-amber-200 rounded-full px-3 py-1 text-xs font-mono text-amber-900 font-semibold shadow-2xs">
+          <i data-lucide="layers" class="w-3.5 h-3.5 mr-1 text-amber-700"></i>
+          PUBLIC WORKS & NATION BUILDING MATRIX
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-syne font-extrabold text-slate-900 tracking-tight">
+          Public Infrastructure & EPC Portfolio
+        </h1>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+          A showcase of high-precision civil engineering delivered for national and state public authorities. Engineered with millimeter tolerances, rigorous seismic simulations, and certified lifecycle longevity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineering Standards Bar (Light Theme) -->
+  <div class="bg-slate-50 border-b border-slate-200 py-3.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-slate-600">
+      <div class="flex items-center space-x-2">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
+        <span><strong>IRC Standards:</strong> IRC:112 (Bridges) • IRC:SP:84 (Highways)</span>
+      </div>
+      <div class="flex items-center space-x-2">
+        <i data-lucide="shield" class="w-4 h-4 text-amber-700"></i>
+        <span><strong>IS Codes:</strong> IS 456 (Plain/Reinforced) • IS 1893 (Seismic)</span>
+      </div>
+      <div class="flex items-center space-x-2">
+        <i data-lucide="leaf" class="w-4 h-4 text-emerald-600"></i>
+        <span><strong>Green Norms:</strong> GRIHA 5-Star & IGBC Platinum Benchmarks</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects Grid Section -->
+  <section class="py-14 sm:py-20 bg-slate-50/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <!-- Sector Tabs (Light Theme) -->
+      <div class="flex items-center space-x-2 overflow-x-auto pb-4 mb-8 text-xs font-mono" id="infraTabs">
+        <button data-cat="all" class="infra-tab-btn px-4 py-2 rounded-lg bg-slate-900 text-white font-bold whitespace-nowrap shadow-xs">
+          All Sectors ({projects.length})
+        </button>
+        <button data-cat="highways" class="infra-tab-btn px-4 py-2 rounded-lg bg-white text-slate-700 hover:text-slate-900 border border-slate-300 whitespace-nowrap shadow-2xs">
+          Highways & Expressways
+        </button>
+        <button data-cat="bridges" class="infra-tab-btn px-4 py-2 rounded-lg bg-white text-slate-700 hover:text-slate-900 border border-slate-300 whitespace-nowrap shadow-2xs">
+          Bridges & Marine
+        </button>
+        <button data-cat="transit" class="infra-tab-btn px-4 py-2 rounded-lg bg-white text-slate-700 hover:text-slate-900 border border-slate-300 whitespace-nowrap shadow-2xs">
+          Metro & Rail
+        </button>
+        <button data-cat="institutional" class="infra-tab-btn px-4 py-2 rounded-lg bg-white text-slate-700 hover:text-slate-900 border border-slate-300 whitespace-nowrap shadow-2xs">
+          Administrative Complexes
+        </button>
+        <button data-cat="water" class="infra-tab-btn px-4 py-2 rounded-lg bg-white text-slate-700 hover:text-slate-900 border border-slate-300 whitespace-nowrap shadow-2xs">
+          Water & Utilities
+        </button>
+        <button data-cat="strategic" class="infra-tab-btn px-4 py-2 rounded-lg bg-white text-slate-700 hover:text-slate-900 border border-slate-300 whitespace-nowrap shadow-2xs">
+          Strategic / Defense
+        </button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="infraGrid">
+        {projects.map(proj => (
+          <div class="infra-card" data-category={proj.categoryKey}>
+            <GovProjectCard 
+              title={proj.title}
+              category={proj.category}
+              authority={proj.authority}
+              location={proj.location}
+              status={proj.status}
+              progress={proj.progress}
+              value={proj.value}
+              lengthOrArea={proj.lengthOrArea}
+              specs={proj.specs}
+              codeCompliance={proj.codeCompliance}
+            />
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Technical Heavy Machinery & Batching Fleet (Light Theme) -->
+  <section class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="max-w-3xl mb-10">
+        <span class="text-xs font-mono uppercase tracking-wider text-amber-800 font-bold block mb-1">
+          Mechanical Assets & Fleet Strength
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-syne font-extrabold text-slate-900">
+          Dedicated High-Capacity Construction Machinery
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-2xs">
+          <span class="block text-2xl font-syne font-extrabold text-amber-800">8 Units</span>
+          <span class="text-xs text-slate-600 mt-1 block">Automatic Batching Plants (120 m³/hr)</span>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-2xs">
+          <span class="block text-2xl font-syne font-extrabold text-slate-900">4 Sets</span>
+          <span class="text-xs text-slate-600 mt-1 block">Wirtgen Slipform Concrete Pavers</span>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-2xs">
+          <span class="block text-2xl font-syne font-extrabold text-emerald-700">6 Nos</span>
+          <span class="text-xs text-slate-600 mt-1 block">150T Segmental Launching Gantries</span>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-2xs">
+          <span class="block text-2xl font-syne font-extrabold text-slate-900">14 Units</span>
+          <span class="text-xs text-slate-600 mt-1 block">Bauer Hydraulic Rotary Piling Rigs</span>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-2xs">
+          <span class="block text-2xl font-syne font-extrabold text-blue-900">48 Nos</span>
+          <span class="text-xs text-slate-600 mt-1 block">GPS-Tracked Transit Mixers (8–10 m³)</span>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-2xs">
+          <span class="block text-2xl font-syne font-extrabold text-emerald-700">100%</span>
+          <span class="text-xs text-slate-600 mt-1 block">In-House Quality Testing Mobile Labs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</GovLayout>
+
+<script is:inline>
+  const tabBtns = document.querySelectorAll('.infra-tab-btn');
+  const infraCards = document.querySelectorAll('.infra-card');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => {
+        b.classList.remove('bg-slate-900', 'text-white', 'font-bold', 'shadow-xs');
+        b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-300', 'shadow-2xs');
+      });
+      btn.classList.add('bg-slate-900', 'text-white', 'font-bold', 'shadow-xs');
+      btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-300', 'shadow-2xs');
+
+      const selectedCat = btn.getAttribute('data-cat');
+      infraCards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (selectedCat === 'all' || cardCat === selectedCat) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
